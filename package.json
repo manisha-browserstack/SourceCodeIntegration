@@ -1,0 +1,20 @@
+{
+  "name": "percy-cypress-integration",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+  "start": "serve public",
+  "test": "npx cypress run",
+  "percy:run": "npx percy exec -- npx cypress run",
+  "percy:run:spec": "npx percy exec -- npx cypress run --spec \"cypress/e2e/visual_test.cy.js\"",
+  "test:percy": "npx percy exec -- npx cypress run --spec \"cypress/e2e/visual_test.cy.js\""
+},
+
+  "devDependencies": {
+    "@percy/cli": "^1.31.4",
+    "@percy/cypress": "^3.0.0",
+    "cypress": "^12.0.0",
+    "http-server": "^14.1.1",
+    "serve": "^14.2.5"
+  }
+}

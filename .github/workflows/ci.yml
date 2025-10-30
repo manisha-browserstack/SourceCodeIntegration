@@ -1,0 +1,29 @@
+name: CI - Percy Cypress
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  percy-cypress:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Start static server
+        run: npx http-server public -p 8080 -c-1 &
+
+      - name: Run Percy + Cypress tests
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+        run: npx percy exec -- npx cypress run --spec "cypress/e2e/visual_test.cy.js"
