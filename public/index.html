@@ -3,16 +3,67 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Product Card - Demo</title>
+  <title>Product Card - Demo (Updated)</title>
   <style>
-    body { font-family: Arial, sans-serif; background:#f5f7fb; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; }
-    .card { background:white; border-radius:12px; box-shadow:0 6px 18px rgba(22,33,62,0.08); padding:20px; width:320px; text-align:left; }
-    .product-image { width:100%; height:180px; background:linear-gradient(135deg,#e0e7ff,#c7f9cc); border-radius:8px; display:flex; align-items:center; justify-content:center; color:#374151; font-weight:700; font-size:20px;}
-    .title { margin-top:14px; font-size:18px; color:#0f172a; }
-    .desc { margin-top:8px; color:#475569; font-size:14px; }
-    .price-row { display:flex; align-items:center; justify-content:space-between; margin-top:14px; }
-    .price { font-size:20px; font-weight:700; color:#0b6e4f; }
-    .btn { background:#2563eb; color:white; border:none; padding:10px 14px; border-radius:8px; cursor:pointer; font-weight:600; }
+    body { 
+      font-family: Arial, sans-serif; 
+      background:#fff7ed; /* changed background */
+      display:flex; 
+      align-items:center; 
+      justify-content:center; 
+      height:100vh; 
+      margin:0; 
+    }
+    .card { 
+      background:white; 
+      border-radius:16px; /* increased radius */
+      box-shadow:0 8px 24px rgba(22,33,62,0.12); /* deeper shadow */
+      padding:22px; 
+      width:330px; 
+      text-align:left; 
+    }
+    .product-image { 
+      width:100%; 
+      height:180px; 
+      background:linear-gradient(135deg,#c7f9cc,#a5f3fc); 
+      border-radius:10px; 
+      display:flex; 
+      align-items:center; 
+      justify-content:center; 
+      color:#1e293b; 
+      font-weight:700; 
+      font-size:20px;
+    }
+    .title { 
+      margin-top:14px; 
+      font-size:19px; 
+      color:#1e40af; /* updated title color */
+    }
+    .desc { 
+      margin-top:8px; 
+      color:#475569; 
+      font-size:14px; 
+    }
+    .price-row { 
+      display:flex; 
+      align-items:center; 
+      justify-content:space-between; 
+      margin-top:14px; 
+    }
+    .price { 
+      font-size:20px; 
+      font-weight:700; 
+      color:#0b6e4f; 
+    }
+    .btn { 
+      background:#22c55e; /* updated button color */
+      color:white; 
+      border:none; 
+      padding:10px 14px; 
+      border-radius:8px; 
+      cursor:pointer; 
+      font-weight:600; 
+    }
   </style>
 </head>
 <body>
@@ -22,7 +73,7 @@
     <div class="desc" id="product-desc">Keeps your drink hot or cold for 12 hours. BPA free, 500ml capacity.</div>
     <div class="price-row">
       <div class="price" id="product-price">$19.99</div>
-      <button class="btn" id="buy-btn">Buy Now</button>
+      <button class="btn" id="buy-btn">Shop Now</button> <!-- changed text -->
     </div>
   </div>
 </body>
